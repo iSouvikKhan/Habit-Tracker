@@ -8,7 +8,7 @@ const port = 8000;
 app.use(express.urlencoded());
 
 //set up the view engine
-app.set('view engine','ejs');
+app.set('view engine', 'ejs');
 app.set('views', './views');
 
 //set up for static files
@@ -18,14 +18,15 @@ app.use(express.static('assets'));
 const db = require('./config/mongoose');
 
 //use express router
-app.use("/",require('./routes'));
+app.use("/", require('./routes'));
 
 //Starting up server
-app.listen(port, function(err){
-    if(err){
-        console.log("Error found",err);
+app.listen(port, function (err) {
+    if (err) {
+        console.log("Error found", err);
         return;
     }
-    console.log("Server is up and running at port:",port);
+    console.log("Server is up and running at port:", port);
 });
 
+// comment
