@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();
 //Port Number 
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 //for parsing of url
 app.use(express.urlencoded());
