@@ -1,7 +1,11 @@
 const mongoose = require('mongoose');
 
+const connection = "mongodb+srv://souvikmukherjee089:Souvik12345@habit-tracker-cluster.qedmnul.mongodb.net/?retryWrites=true&w=majority";
+
 //conect to the database
-mongoose.connect('mongodb://127.0.0.1/habit_Trackerdb');
+// mongoose.connect('mongodb://127.0.0.1/habit_Trackerdb');
+
+mongoose.connect(connection, { useNewUrlParser: true });
 
 //acquire the connection 
 const db = mongoose.connection;
